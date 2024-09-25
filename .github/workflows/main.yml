@@ -1,0 +1,48 @@
+name: CI/CD for react Todo
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v3
+
+            - name: Install Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18.x
+
+            - name: Install Dependencies
+              run: |
+                  cd sketchAndFlow
+                  yarn install
+
+            - name: Run Lint
+              run: |
+                  cd sketchAndFlow
+                  yarn lint
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v3
+
+            - name: Install Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18.x
+
+            - name: Install Dependencies
+              run: |
+                  cd sketchAndFlow
+                  yarn install
+
+            - name: Run Lint
+              run: |
+                  cd sketchAndFlow
+                  yarn lint
