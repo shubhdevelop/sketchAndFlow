@@ -1,4 +1,4 @@
-name: CI/CD for react Todo
+name: CI/CD sketchAndFlow
 
 on:
     push:
@@ -39,6 +39,6 @@ jobs:
               run: |
                   yarn install
 
-            - name: Run Lint
+            - name: Run Tests
               run: |
                   yarn test
