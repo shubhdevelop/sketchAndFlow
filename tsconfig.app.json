@@ -24,6 +24,8 @@
     "include": [
         "src",
         "tests",
+        "tailwind.config.js",
+        "postcss.config.js",
         "tests/setup/setupTest.ts",
         "eslint.config.js",
         "vite.config.ts",
